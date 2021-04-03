@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<!--custom css-->
+<link rel="stylesheet" href="../../hiphop/style/artistprod.css">
+
+<html>
+<body>
+<!--navigation bar-->
+<ul>
+  <li  style="float:right"> <a class = "city"> GERMANY </a></li>
+  <li><a class="option1"  href="../index.html">Home</a></li>
+  <li><a  href="../index.html#world">World</a></li>
+  <li><a href="../index.html#memory">Memory Lane</a></li>
+  
+  <select class = "select" id="getLoc" onchange="adSelectCheck(this);">  
+    <option id="Germany.html" value="4">GERMANY</option>
+    <option id="LA.html" value="4">USA-CA-LACounty</option>
+    <option id="SanDiego.html" value="4">USA-CA-SanDiego</option>
+    <option id="SANFRANCISCOBAYAREA" value="4">USA-CA-SanFranciscoBayArea</option>
+    <option id="Ventura.html" value="4">USA-CA-VenturaCounty</option>
+    <option id="Broward-CountyFL.html" value="4">USA-FL-BrowardCounty</option>
+    <option id="Miami-DadeCounty.html" value="4">USA-FL-Miami-DadeCounty</option>
+    <option id="HoustonTX.html" value="4">USA-TX-Houston</option>
+    <option id="Canada.html" value="4">CANADA</option>
+    <option id="Japan.html" value="4">JAPAN</option>
+    <option id="Mexico.html" value="4">MEXICO</option>
+    <option id="UK.html" value ="4">UNITEDKINGDOM</option>
+  </select>
+  <button class = "button" id="Vamonos" class="c-butn butn--stripe">Discover</button>
+</ul>
+<!--end of navigation bar-->
+
+<br><br>
+<!--start of spotify embedded code-->
+<p id="demo"></p>
+<!-- end of spotify embedded code-->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script type= "text/javascript">
+ $("#Vamonos").click(function(e) { // redirects page to desired year
+        if (getLocation() == "select") {
+            return false;
+        }
+        e.preventDefault();
+        window.location =   getLocation() + ".html";
+    });
+
+
+  
+  
+    function getLocation(){
+          var loc = $("#getLoc option:selected").text();
+          return loc;
+        };
+
+var artists = ["<iframe src=\"https://open.spotify.com/embed/artist/6gto7HVNhu4ARE3P3g8Y5Y\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe> ", 
+"<iframe src=\"https://open.spotify.com/embed/artist/3c96G4d2lUOxhomM2mby5S\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe> ",
+"<iframe src=\"https://open.spotify.com/embed/artist/75ctWsRuGXmxMxnFPkuEwA\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe> ", 
+"<iframe src=\"https://open.spotify.com/embed/artist/2JwyRtuXf2l6sTnSnGVIa1\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe> ",
+"<iframe src=\"https://open.spotify.com/embed/artist/5wyWp867LWGjFmYZXVSFnZ\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe> ",
+"<iframe src=\"https://open.spotify.com/embed/artist/5j21TGkrNEAJe3gG9VlS34\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/4Yttlv9ndGjCDCVLqM7ACq\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/5eioJDe26lOqkAMbuhzZYs\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/1aS5tqEs9ci5P9KD9tZWa6\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/1SUu1Bi7ev9HbOzyVC77qD\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/7J207fU1tty4DWCIhJSzh0\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/7GaMopkesD4KK9dNbgyO5D\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/0fyKhasYrfZdtpzQHO9HLl\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/0daqkBcaVRoQwHAPZ5Pp9l\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/6ynopZPMBXcIGBI9M02Un5\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/3utZ2yeQk0Z3BCOBWP7Vlu\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/3ZuBEj9ppJe8GSdKaMTfMN\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/3drqpTL4sQOckmAfF9i1wg\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/7oMRcCu0OYSCtCyS3P37iC\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/33Dtwad3snCG92mhmi17WM\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/6VjbeCqoayiHYnefrisskv\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/0HSc7yUdNSosxRb2UJnXlz\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/6XFQvBHGEr3mRfOHcqPXv8\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/67dSXpqPIaNsmF5PufTSCM\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"];
+var text = "";
+var i;
+for ( var z = 0; z< 1; z++){
+text += "<div class =\"row\">";
+for (i = 0; i < artists.length; i++) {
+  text +=   "<div class=\"column\">" + artists[i] + "</div>";
+}
+text += "</div>";
+document.getElementById("demo").innerHTML = text;
+}
+
+</script>
+</body>
+</html>

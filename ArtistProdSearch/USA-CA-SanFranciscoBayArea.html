@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<!--custom css-->
+<link rel="stylesheet" href="../../hiphop/style/artistprod.css">
+
+<html>
+<body>
+<!--navigation bar-->
+<ul>
+  <li  style="float:right"> <a class = "city"> CALIFORNIA: SAN FRANCISCO BAY AREA</a></li>
+  <li><a class="option1"  href="../index.html">Home</a></li>
+  <li><a  href="../index.html#world">World</a></li>
+  <li><a href="../index.html#memory">Memory Lane</a></li>
+  
+  <select class = "select" id="getLoc" onchange="adSelectCheck(this);"> 
+    <option id="SANFRANCISCOBAYAREA" value="4">USA-CA-SanFranciscoBayArea</option>
+    <option id="LA.html" value="4">USA-CA-LACounty</option>
+    <option id="SanDiego.html" value="4">USA-CA-SanDiego</option>
+    <option id="Ventura.html" value="4">USA-CA-VenturaCounty</option>
+    <option id="Broward-CountyFL.html" value="4">USA-FL-BrowardCounty</option>
+    <option id="Miami-DadeCounty.html" value="4">USA-FL-Miami-DadeCounty</option>
+    <option id="HoustonTX.html" value="4">USA-TX-Houston</option>
+    <option id="Canada.html" value="4">CANADA</option>
+    <option id="Japan.html" value="4">JAPAN</option>
+    <option id="Mexico.html" value="4">MEXICO</option> 
+    <option id="Germany.html" value="4">GERMANY</option>
+    <option id="UK.html" value ="4">UNITEDKINGDOM</option>
+    
+  </select>
+  <button class = "button" id="Vamonos" class="c-butn butn--stripe">Discover</button>
+</ul>
+<!--end of navigation bar-->
+
+<br><br>
+<!--start of spotify embedded code-->
+<p id="demo"></p>
+<!-- end of spotify embedded code-->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script type= "text/javascript">
+ $("#Vamonos").click(function(e) { // redirects page to desired year
+        if (getLocation() == "select") {
+            return false;
+        }
+        e.preventDefault();
+        window.location =   getLocation() + ".html";
+    });
+
+
+  
+  
+    function getLocation(){
+          var loc = $("#getLoc option:selected").text();
+          return loc;
+        };
+
+var artists = ["<iframe src=\"https://open.spotify.com/embed/artist/4sv6VJ2QZlaSosz3kFlxQH\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/7boQqq2hUcz9kHcQOecG4j\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/1Z3HvW1V35gdsbhY20SMoU\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/5QoPmqq8UfE0zsTWkM3CQD\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/3n6RTmT1sgWeNNCfPyJMw3\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/276kc3wR6o0EgYCSMiHBqz\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/3crnzLy8R4lVwaigKEOz7V\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/4sb7rZNN93BSS6Gqgepo4v\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/4TqmaFJYM8SvuhrunxpmT3\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/6k7TX5dxiKZiwMWTn8ZKbl\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/6nltEpEZtqZD1v4YJLlaZI\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/4hSGrfIm5xRloHXESKxrFd\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/4yiugbZZ4LTpWJ31XCBTj7\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/2lrtGWxNXWjd0JzDLKXubI\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/1MYkU0PmvFtLiCOYxdQua7\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/1rBxtaN521NYi8Z35G7fUn\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+" <iframe src=\"https://open.spotify.com/embed/artist/3hVgH6JZtwcKV6wSxiRNDj\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/57JVa2arbT41WF9qmi7C5E\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/3z3g65U7mmyyBmmDfsQK9x\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/1sPpJhevOYz54gNgeh2LaV\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/4tzxCsdhR0IIUNyzwrag4C\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/55TH3aMMK1u2VsR8DPGC6D\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/4RmueWJt4rKOlM8O2AeYsv\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/2ZavqCJe7uqkRpISes0NFi\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/02kJSzxNuaWGqwubyUba0Z\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/2GnW4VvOkvtjWh4Boadetv\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+" <iframe src=\"https://open.spotify.com/embed/artist/6cK3NBO6uP7hh0oyuVELFl\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/2rblp9fJo16ZPTcKDtlmKW\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/3XVpDdKav6C6zwlDXPhMEO\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/4KaPpMa2dJyBtUS2UoJTyM\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/2EpVYXcMdxyQEMMaBuDynU\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/09ci97mGlIVzXxSRGEKPxl\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"
+];
+var text = "";
+var i;
+for ( var z = 0; z< 1; z++){
+text += "<div class =\"row\">";
+for (i = 0; i < artists.length; i++) {
+  text +=   "<div class=\"column\">" + artists[i] + "</div>";
+}
+text += "</div>";
+document.getElementById("demo").innerHTML = text;
+}
+
+</script>
+</body>
+</html>

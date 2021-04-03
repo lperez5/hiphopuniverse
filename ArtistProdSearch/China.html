@@ -1,0 +1,152 @@
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+ 
+ 
+ <style>
+     * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 23.33%;
+  padding: 15px;
+  margin-left: 10px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+ </style>
+ <!--Navigation-->
+ <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">CALIFORNIA: LA COUNTY</a>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=
+      "#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ml-auto">
+        <li class ="nav-item">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class ="nav-item">
+          <a class="nav-link" href="../index.html#world">World</a>
+        </li>
+        <li class ="nav-item">
+          <a class="nav-link" href="../index.html#memory">Memory Lane</a>
+        </li>
+        <li class ="nav-item">
+          <a class="nav-link" href="../index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div> 
+  
+    </nav>
+          
+    <br><br><br><br>
+    <select id="admDivCheck2">
+            <option value="2">LA</option>
+            <option value="2">Ventura</option>
+            <option value="2">SanDiego</option>
+            </select>
+            
+            
+            <button id="finalOp" class="a-butn butn--stripe">Discover</button>
+
+<!-- jQuery -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script type= "text/javascript">
+$("#finalOp").click(function(e) { // redirects page to desired year
+    if (getCounty() == "Select") {
+        return false;
+    }
+    e.preventDefault();
+    window.location =  getCounty() + ".html"; 
+    
+    
+    });
+
+  
+  
+    function getCounty(){
+      var county = $("#admDivCheck2 option:selected").text();
+      return county;
+    };
+
+
+</script>
+
+        <div class ="row">
+            <div class="column">
+                        <iframe src="https://open.spotify.com/embed/artist/0NbfKEOTQCcwd6o7wSDOHI" 
+        width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+         
+<div class="column">
+        <iframe src="https://open.spotify.com/embed/artist/2YZyLoL8N0Wb9xBt1NhZWg" 
+        width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+        
+        
+        <div class="column">
+                 <iframe src="https://open.spotify.com/embed/artist/6L3x3if9RVimruryD9LoFb"
+         width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+
+       
+       
+         <div class="column">
+               <iframe src="https://open.spotify.com/embed/artist/5IcR3N7QB1j6KBL8eImZ8m"
+          width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+
+         
+         
+          <div class="column">
+
+           <iframe src="https://open.spotify.com/embed/artist/2B4ZHz4QDWJTXPFPgO5peE" 
+          width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+
+        <div class="column">
+            <iframe src="https://open.spotify.com/embed/artist/0b2XeWDPeBiLeskT6RFqMb" width="300" height="380" frameborde
+            r="0" allowtransparency="true" allow="encrypted-media"></iframe>
+         </div>
+
+         <div class="column">
+            <iframe src="https://open.spotify.com/embed/artist/2LiWxiQzuD9nmWQ6NCA8Gd" width="300" height="380" frameb
+            order="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            
+         </div>
+
+         <div class="column">
+            <iframe src="https://open.spotify.com/embed/artist/3Mcii5XWf6E0lrY3Uky4cA" width="300" height="380" frameborder="0" 
+            allowtransparency="true" allow="encrypted-media"></iframe>
+         </div>
+
+         <div class="column">
+            <iframe src="https://open.spotify.com/embed/artist/0EeQBlQJFiAfJeVN2vT9s0" width="300" height="380" frameborder="0" 
+            allowtransparency="true" allow="encrypted-media"></iframe>
+           
+         </div>
+         <div class="column">
+
+            <iframe src="https://open.spotify.com/embed/artist/7hJcb9fa4alzcOq3EaNPoG" width="300" height="380"
+             frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+         </div>
+        </div> 
+     </div>

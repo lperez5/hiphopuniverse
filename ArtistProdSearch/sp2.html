@@ -1,0 +1,127 @@
+
+  <link rel="stylesheet" href="../../style/artistprod.css">
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {margin:0;}
+
+
+
+li {
+  float: left;
+  font-size: x-large;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(50, 127, 146);
+  float: right;
+}
+
+.active {
+  background-color: rgb(110, 174, 218);
+ 
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li  style="float:right"> <a class = "city"> TEXAS: HOUSTON </a></li>
+  <li><a class="active"  href="../index.html">Home</a></li>
+  <li><a  href="../index.html#world">World</a></li>
+  <li><a href="../index.html#memory">Memory Lane</a></li>
+  
+  <select class = "bas" id="getLoc" onchange="adSelectCheck(this); ">
+    
+    <option id="LA.html" value="4">USA-CA-LACounty</option>
+    <option id="SANFRANCISCOBAYAREA" value="4">USA-CA-SanFranciscoBayArea</option>
+    <option id="Ventura.html" value="4">USA-CA-VenturaCounty</option>
+    <option id="SanDiego.html" value="4">USA-CA-SanDiego</option>
+    <option id="HoustonTX.html" value="4">USA-TX-Houston</option>
+    <option id="Broward-CountyFL.html" value="4">USA-FL-BrowardCounty</option>
+    <option id="Miami-DadeCounty.html" value="4">USA-FL-Miami-DadeCounty</option>
+    <option id="Mexico.html" value="4">MEXICO</option>
+    <option id="Canada.html" value="4">CANADA</option>
+    <option id="Japan.html" value="4">JAPAN</option>
+    <option id="Germany.html" value="4">GERMANY</option>
+    <option id="UK.html" value ="4">UNITEDKINGDOM</option>
+    
+      </select>
+    
+        
+        
+      <button class = "but" id="Vamonos">Discover</button>
+
+   
+</ul>
+<!-- jQuery -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script type= "text/javascript">
+ $("#Vamonos").click(function(e) { // redirects page to desired year
+        if (getLocation() == "select") {
+            return false;
+        }
+        e.preventDefault();
+        window.location =   getLocation() + ".html";
+    });
+
+
+  
+  
+    function getLocation(){
+          var loc = $("#getLoc option:selected").text();
+          return loc;
+        };
+
+</script>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+  <br><br>
+<p id="demo"></p>
+
+<script>
+ //  vvar
+var artists = ["<iframe src=\"https://open.spotify.com/embed/artist/4Q5sPmM8j4SpMqL4UA1DtS\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe> ", 
+"<iframe src=\"https://open.spotify.com/embed/artist/1grI9x4Uzos1Asx8JmRW6T\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe> ",
+"<iframe src=\"https://open.spotify.com/embed/artist/6TC6ZeVdvCuBSn32h5Msul\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>", 
+"<iframe src=\"https://open.spotify.com/embed/artist/0st5vgzw9XkH5ALJiUM1lE\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+"<iframe src=\"https://open.spotify.com/embed/artist/0k7Xl1pqI3tu8sSEjo5oEg\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+" <iframe src=\"https://open.spotify.com/embed/artist/0Y5tJX1MQlPlqiwlOH1tJY\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"];
+var text = "";
+var i;
+for ( var z = 0; z< 1; z++){
+text += "<div class =\"row\">";
+for (i = 0; i < artists.length; i++) {
+  text +=   "<div class=\"column\">" + artists[i] + "</div>";
+}
+text += "</div>";
+document.getElementById("demo").innerHTML = text;
+}
+
+</script>
+
+</body>
+</html>

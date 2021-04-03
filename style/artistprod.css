@@ -1,0 +1,128 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    
+    float: left;
+    width: 23.33%;
+    padding: 15px;
+    margin-left: 10px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  /*select option */
+  .select{
+    width: 115px;
+    position: relative;
+    top: 17px;
+  }
+/*button*/
+  .button{
+    position: relative;
+      top: 18px;
+      height: 19px;
+  }
+
+
+
+  /* Create two unequal columns that floats next to each other */
+      /* Left column */
+      .leftcolumn {  
+    
+        float: left;
+        width: 60%;
+        margin-bottom: auto;
+        margin-top: 25px;
+      }
+
+      /* Right column */
+      .rightcolumn {
+        float: left;
+        width: 40%;
+        padding-left: 20px;
+        margin-bottom: auto;
+        margin-top: 25px;
+      }
+      
+      .card {
+        background-color:
+        rgb(241, 237, 237);
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center ;
+       
+     }
+     
+     /* Clear floats after the columns */
+     .row:after {
+       content: "";
+       display: table;
+       clear: both;
+     }
+     
+      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 800px) {
+        .leftcolumn, .rightcolumn {   
+          width: 100%;
+          padding: 0;
+        }
+      }
+      iframe, object, embed {
+        max-width: 115%;
+        max-height: 100%;
+}
+/* for the youtube/spotify boxes*/
+.frames { 
+  border: 2px solid #241149;
+  margin-bottom: 35px;     
+}
+
+li {
+  float: left;
+  font-size: x-large;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(76, 144, 175);
+ 
+  float: right;
+}
+
+body {
+  margin:0;
+}
+
+/*color of home option, top corner left*/
+.option1  {
+  background-color:  rgb(110, 174, 218);
+ 
+}
+
+/* city name: ex:"houston" */
+.city{
+font-size: x-large;
+}
